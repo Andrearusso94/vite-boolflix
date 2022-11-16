@@ -19,6 +19,7 @@ export default {
     }
   },
   methods: {
+    // TODO: gestire la chiamata anche per le serie tv
     callApi(url) {
       axios.get(url)
         .then(response => {

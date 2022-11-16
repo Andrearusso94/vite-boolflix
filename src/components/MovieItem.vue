@@ -12,6 +12,7 @@ export default {
     <div class="col">
         <div class="movie my-2">
 
+
             <h5>{{ movie.title }}</h5>
             <h4 class="text-secondary">{{ movie.original_title }}</h4>
             <img class="img-fluid rounded-circle" v-if="movie.original_language === 'it'" src="../assets/img/ita.png"
