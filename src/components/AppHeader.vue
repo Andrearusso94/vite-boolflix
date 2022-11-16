@@ -15,12 +15,12 @@ export default {
         searchMovie() {
             console.log(this.store.searchText);
             const searchText = this.store.searchText;
-            const url = `${this.store.API_URL}?nameMovie=${searchText}`;
+            const url = `${this.store.API_URL}&query=${searchText}`;
             console.log(url);
             axios.get(url)
                 .then(resp => {
                     console.log(resp);
-                    this.store.movies = resp.data;
+                    this.store.movies = resp.data.results;
                 });
         }
     },

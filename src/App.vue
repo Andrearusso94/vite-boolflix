@@ -2,7 +2,7 @@
 
 import axios from 'axios'
 import AppHeader from './components/AppHeader.vue'
-
+import AppMain from './components/AppMain.vue'
 import { store } from './components/store'
 
 export default {
@@ -10,6 +10,7 @@ export default {
   components: {
 
     AppHeader,
+    AppMain,
 
   },
   data() {
@@ -22,7 +23,7 @@ export default {
       axios.get(url)
         .then(response => {
           console.log(response);
-          this.store.movies = response.data
+          this.store.movies = response.data.geners
         })
         .catch(err => {
           console.error(err.message)
@@ -39,6 +40,7 @@ export default {
 
 <template>
   <AppHeader></AppHeader>
+  <AppMain></AppMain>
 
 </template>
 
