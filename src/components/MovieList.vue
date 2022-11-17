@@ -15,11 +15,17 @@ export default {
 }
 </script>
 <template>
-    <div class="container-fluid py-5">
+    <div class="container py-5">
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-6 mx-2">
+        <div class="row overflow-auto mx-2">
             <MovieItem :movie="movie" v-for="movie in store.movies">
             </MovieItem>
         </div>
     </div>
 </template>
+<style lang="scss" scoped>
+.container {
+    max-width: 100vw;
+    max-height: 800px;
+}
+</style>
