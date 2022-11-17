@@ -12,19 +12,19 @@ export default {
         };
     },
     methods: {
-        searchMovie() {
+        searchMovie_Series() {
             console.log(this.store.searchText);
             const searchText = this.store.searchText;
-            const urlMovie = `${this.store.API_URL}&query=${searchText}`;
-            const urlSeries = `${this.store.API_URL_Series}&query=${searchText}`;
-            console.log(urlMovie);
+            const url = `${this.store.API_URL}&query=${searchText}`;
+
+            console.log(url);
 
 
-            axios.get(urlMovie, urlSeries)
+            axios.get(url)
                 .then(resp => {
                     console.log(resp);
                     this.store.movies = resp.data.results;
-                    this.store.series = resp.data.results;
+
                 });
 
         },
@@ -36,7 +36,7 @@ export default {
 <template>
     <header>
         <div class="search">
-            <SearchBox @searchData="searchMovie"></SearchBox>
+            <SearchBox @searchData="searchMovie_Series"></SearchBox>
         </div>
     </header>
 </template>

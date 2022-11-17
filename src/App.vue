@@ -25,7 +25,7 @@ export default {
         .then(response => {
           console.log(response);
           this.store.movies = response.data.geners
-          this.store.series = response.data.results
+
         })
         .catch(err => {
           console.error(err.message)
@@ -34,7 +34,7 @@ export default {
     }
   },
   mounted() {
-    this.callApi(this.store.API_URL, this.store.API_URL_Series)
+    this.callApi(this.store.API_URL)
   }
 }
 </script>

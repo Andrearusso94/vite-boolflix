@@ -15,7 +15,7 @@ export default {
         <div class="movie my-2">
 
             <img :src="'https://image.tmdb.org/t/p/original/' + movie.poster_path" alt="">
-            <h5>{{ movie.title || series.name }}</h5>
+            <h5>{{ movie.title }}</h5>
             <h4 class="text-secondary">{{ movie.original_title }}</h4>
             <img class="img-fluid flag rounded-circle" v-if="movie.original_language === 'it'"
                 src="../assets/img/ita.png" alt="">
