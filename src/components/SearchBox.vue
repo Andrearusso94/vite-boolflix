@@ -11,8 +11,8 @@ export default {
 }
 </script>
 <template>
-    <input type="search" class="form-control mx-5 me-2" placeholder="Search" aria-label="Search"
-        v-model="store.searchText">
+    <input type="search" class="form-control mx-5 me-2" @keyup.enter="$emit('searchData')" placeholder="Search"
+        aria-label="Search" v-model="store.searchText">
     <button type="submit" class="btn btn_click" @click="$emit('searchData')">Search</button>
 </template>
 

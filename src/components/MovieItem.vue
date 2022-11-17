@@ -15,11 +15,13 @@ export default {
 <template>
     <div class="col position-relative">
         <div class="card_movie">
-            <div class="movie my-2">
+            <div class="movie px-2 my-2">
 
 
-                <h5 class="text-white"> Titolo: {{ movie.title || movie.name }}</h5>
-                <h4 class="text-white"> Titolo Originale: {{ movie.original_title || movie.original_name }}</h4>
+                <h6 class="text-white"> Titolo:<span class="text-secondary"> {{ movie.title || movie.name }}</span></h6>
+                <h6 class="text-white"> Titolo Originale:<span class="text-secondary"> {{ movie.original_title ||
+                        movie.original_name
+                }}</span></h6>
                 <img class="img-fluid flag rounded-circle" v-if="movie.original_language === 'it'"
                     src="../assets/img/ita.png" alt="">
                 <img class="img-fluid flag rounded-circle " v-else-if="movie.original_language === 'en'"
@@ -28,7 +30,8 @@ export default {
                     src="../assets/img/spa.png" alt="">
                 <img class="img-fluid flag rounded-circle" v-else-if="movie.original_language === 'fr'"
                     src="../assets/img/france.png" alt="">
-                <p classe="text-white" v-else>Lingua Originale: {{ movie.original_language }}</p>
+                <p classe="text-white" v-else>Lingua Originale: <span class="text-secondary">{{ movie.original_language
+                }}</span> </p>
 
                 <div class="vote">
                     <font-awesome-icon icon="fa-solid fa-star" v-for="index in 5"
@@ -36,7 +39,7 @@ export default {
                 </div>
 
                 <p calss="overview"> Overview:
-                    {{ movie.overview }}
+                    <span class="text-secondary">{{ movie.overview }}</span>
                 </p>
 
 
@@ -57,11 +60,14 @@ export default {
     color: white;
     margin-bottom: 2rem;
     overflow: hidden;
+
+
 }
 
 img {
     max-width: 100%;
     height: 500px;
+
 }
 
 
@@ -78,6 +84,7 @@ img {
         opacity: 0;
     }
 }
+
 
 .flag {
     width: 25px;

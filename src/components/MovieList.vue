@@ -17,7 +17,7 @@ export default {
 <template>
     <div class="container py-5">
 
-        <div class="row overflow-auto mx-2">
+        <div class="row mx-2">
             <MovieItem :movie="movie" v-for="movie in store.movies">
             </MovieItem>
         </div>
