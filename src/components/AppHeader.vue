@@ -15,14 +15,19 @@ export default {
         searchMovie() {
             console.log(this.store.searchText);
             const searchText = this.store.searchText;
-            const url = `${this.store.API_URL}&query=${searchText}`;
-            console.log(url);
-            axios.get(url)
+            const urlMovie = `${this.store.API_URL}&query=${searchText}`;
+            const urlSeries = `${this.store.API_URL_Series}&query=${searchText}`;
+            console.log(urlMovie);
+
+
+            axios.get(urlMovie, urlSeries)
                 .then(resp => {
                     console.log(resp);
                     this.store.movies = resp.data.results;
+                    this.store.series = resp.data.results;
                 });
-        }
+
+        },
     },
     components: { SearchBox }
 }
