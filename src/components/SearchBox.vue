@@ -13,5 +13,11 @@ export default {
 <template>
     <input type="search" class="form-control mx-5 me-2" placeholder="Search" aria-label="Search"
         v-model="store.searchText">
-    <button type="submit" class="btn" @click="$emit('searchData')">Search</button>
+    <button type="submit" class="btn btn_click" @click="$emit('searchData')">Search</button>
 </template>
+
+<style lang="scss" scoped>
+.btn_click {
+    background-color: #E40715
+}
+</style>
