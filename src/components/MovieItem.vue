@@ -65,7 +65,7 @@ export default {
     color: white;
     margin-bottom: 2rem;
     overflow: hidden;
-
+    flex-shrink: 0;
 
 }
 
@@ -101,9 +101,5 @@ img {
 
 .grey {
     color: rgba(128, 128, 128, 0.831)
-}
-
-ul {
-    display: inline;
 }
 </style>

@@ -16,7 +16,7 @@ export default {
 </script>
 <template>
     <div class="container_mine my-5">
-        <ul class="">
+        <ul class="d-flex">
             <MovieItem :movie="movie" v-for="movie in store.movies">
             </MovieItem>
         </ul>
@@ -28,8 +28,9 @@ export default {
 
 </template>
 <style lang="scss" scoped>
-.container_mine {
-
+ul {
     overflow-y: scroll;
+    max-width: 100vw;
+
 }
 </style>
