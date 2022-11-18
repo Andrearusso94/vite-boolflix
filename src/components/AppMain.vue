@@ -16,6 +16,9 @@ export default {
 </script>
 
 <template>
+    <main>
 
-    <MovieList :movies="store.movies" />
+        <MovieList :movies="store.movies" />
+
+    </main>
 </template>

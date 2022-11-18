@@ -15,17 +15,21 @@ export default {
 }
 </script>
 <template>
-    <div class="container py-5">
-
-        <div class="row mx-2">
+    <div class="container_mine my-5">
+        <ul class="">
             <MovieItem :movie="movie" v-for="movie in store.movies">
             </MovieItem>
-        </div>
+        </ul>
     </div>
+
+    <!--  <div class="row mx-2">
+            
+        </div>-->
+
 </template>
 <style lang="scss" scoped>
-.container {
-    max-width: 100vw;
-    max-height: 800px;
+.container_mine {
+
+    overflow-y: scroll;
 }
 </style>
